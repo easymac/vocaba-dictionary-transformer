@@ -4,7 +4,9 @@ A simple script for importing data from the English Wiktionary dumps provided by
 
 The data is transformed for the purposes of the [Vocaba app](https://github.com/easymac/vocaba).
 
-The output, tentatively, is itself a large `json` file but in the future might be a sqlite database instead depending on what ends up being easier for compression and distribution within a multiplatform Expo app.
+The output is a SQLite database (for use with Expo's sqlite3). Its structure isn't set in stone, but for now it's a table with top-level word properties as columns (word, lexical category, ipa pronunciation) and its definitions as a serialized JSON string.
+
+The idea here being that we really don't need to do anything with definitions except display them, so why bother with extra tables and joins? (We will regret this decision one day.)
 
 ## Getting started
 

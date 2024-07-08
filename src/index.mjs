@@ -10,9 +10,6 @@ if (args.length < 2) {
 }
 
 const inputFilePath = args[0];
-const outputFilePath = args[1];
+const outputDbName = args[1];
 
-console.log('Processing data...');
-console.log(inputFilePath, outputFilePath)
-
-transformController.processData(inputFilePath, outputFilePath);
+transformController.processData(inputFilePath, outputDbName);

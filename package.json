@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "better-sqlite3": "^11.1.2",
     "node-jsonl": "^0.1.0"
   }
 }
