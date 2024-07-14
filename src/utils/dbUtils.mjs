@@ -17,6 +17,13 @@ export function createTable(db) {
   statement.run();
 }
 
+export function indexTable(db) {
+  const statement = db.prepare(
+    `CREATE INDEX IF NOT EXISTS idx_word ON words (word)`
+  );
+  statement.run();
+}
+
 export function insertData(db, entry) {
   const statement = db.prepare(`INSERT INTO words
     (word, lexical_category, ipa, meanings)

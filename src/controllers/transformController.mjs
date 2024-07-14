@@ -16,7 +16,7 @@ export async function processData(inputFilePath, outputFilePath) {
         dbUtils.insertData(db, transformedEntry);
       }
     }
-    console.log('Closing database')
+    dbUtils.indexTable(db);
     db.close();
   } catch (error) {
     console.error(error);
